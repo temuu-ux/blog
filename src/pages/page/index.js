@@ -6,7 +6,7 @@ export default function Home(props) {
     <div>
       <p>hello</p>
       <p>{props.posts[1].title}</p>
-      <p>{props.posts[1].social_image}</p>
+      <p>{props.posts[1].cover_image}</p>
       {/* <Image src="next.svg" width={200} height={200} alt="Pic" /> */}
 
       {/* <img src={props.posts[3].cover_image}></img> */}
@@ -15,7 +15,7 @@ export default function Home(props) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch("https://dev.to/api/articles?top=2");
+  const res = await fetch("https://dev.to/api/articles?collection_id=99");
   const posts = await res.json();
 
   const someData = "someData";
