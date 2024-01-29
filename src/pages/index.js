@@ -1,24 +1,25 @@
 import Image from "next/image";
+import Card from "@/components/Card";
+import Highligh from "@/components/Highligh";
 
 export default function Home(props) {
-  console.log(props.posts);
+  const { posts } = props;
+  console.log(posts);
   return (
-    <div>
-      <p>hello</p>
-      <p>{props.posts[1].title}</p>
-      <p>{props.posts[1].social_image}</p>
-      {/* <Image src="next.svg" width={200} height={200} alt="Pic" /> */}
-
-      {/* <img src={props.posts[3].cover_image}></img> */}
+    <div className="flex flex-col gap-5">
+      <Highligh />
+      <div className="flex  gap-6 m-auto justify-center items-center">
+        {posts.map((e) => (
+          <Card title={e.title} url={e.social_image} />
+        ))}
+      </div>
     </div>
   );
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch("https://dev.to/api/articles?top=2");
+  const res = await fetch("https://dev.to/api/articles?top-2&per_page=4");
   const posts = await res.json();
-
-  const someData = "someData";
 
   return {
     props: {
