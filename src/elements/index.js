@@ -1,8 +1,10 @@
 import Highligh from "@/components/Highligh";
+
 export default function Home(props) {
   const { posts } = props;
   return (
     <div className="flex m-auto justify-center items-center">
+      
       {posts.map((e) => (
         <Highligh url={e.cover_image} />
       ))}
