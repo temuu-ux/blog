@@ -15,7 +15,7 @@ export default function Blog(props) {
           <p className="text-[#97989F] text-base font-extralight">
             {props.name}
           </p>
-
+          <p>{props.profile}</p>
           <p className="text-[#97989F] text-base font-extralight">
             {props.date}
           </p>

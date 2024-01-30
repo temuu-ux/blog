@@ -12,10 +12,10 @@ export default function Home(props) {
   console.log(posts3, "hi");
   return (
     <div className="flex flex-col gap-[100px]">
-      <div className="m-auto w-[1216px] ">
+      <div className="m-auto w-[1917px] flex ">
         <Header />
       </div>
-      <div className="flex flex-col m-auto gap-5">
+      <div className="flex flex-col m-auto ">
         {posts1.map((highligh) => (
           <Highligh
             description={highligh.description}
@@ -36,10 +36,11 @@ export default function Home(props) {
             url={blog.cover_image}
             date={new Date(blog.published_at).toLocaleDateString()}
             name={blog.user.name}
+            // profile={blog.user.profile_image_90}
           />
         ))}
       </div>
-      <div className="m-auto w-[1216px]">
+      <div className="m-auto w-[1216px] h-[236px] ">
         <Footer className="" />
       </div>
     </div>
