@@ -16,7 +16,7 @@ export default function Header() {
       <div className="flex gap-10 justify-center text-base items-center">
         <button
           className="text-base font-normal text-[#3B3C4A]"
-          onClick={() => router.push("/index")}
+          onClick={() => router.push("/")}
         >
           Home
         </button>
