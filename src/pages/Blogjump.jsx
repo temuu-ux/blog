@@ -21,7 +21,7 @@ const Blogjump = ({ posts3 }) => {
                   All
                 </button>
               </Link>
-              <Link href={"/design"}>
+              <Link href={"/blog/design"}>
                 <button className="text-xs text-[#495057] font-bold	">
                   Design
                 </button>
@@ -57,11 +57,13 @@ const Blogjump = ({ posts3 }) => {
           <div className="flex m-auto gap-5 w-[1216px] flex-wrap">
             {posts3.map((blog) => (
               <Blog
-                title={blog.title}
-                url={blog.cover_image}
-                date={new Date(blog.published_at).toLocaleDateString()}
-                name={blog.user.name}
+                aData={blog}
                 tag={blog.tag_list[0]}
+                // title={blog.title}
+                // url={blog.cover_image}
+                // date={new Date(blog.published_at).toLocaleDateString()}
+                // name={blog.user.name}
+                // tag={blog.tag_list[0]}
                 // profile={blog.user.profile_image_90}
               />
             ))}

@@ -60,13 +60,14 @@ export default function Home(props) {
               );
               return (
                 <Blog
-                  title={blog.title}
-                  url={blog.cover_image}
-                  date={new Date(blog.published_at).toLocaleDateString()}
-                  name={blog.user.name}
+                  aData={blog}
                   tag={blog.tag_list[0]}
-                  profile={blog.user.profile_image_90}
-                  z
+                  // title={blog.title}
+                  // url={blog.cover_image}
+                  // date={new Date(blog.published_at).toLocaleDateString()}
+                  // name={blog.user.name}
+                  // tag={blog.tag_list[0]}
+                  // profile={blog.user.profile_image_90}
                 />
               );
             })}
@@ -83,7 +84,7 @@ export default function Home(props) {
   );
 }
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
   const Highligh = await fetch("https://dev.to/api/articles?per_page=1&top=1");
   const posts1 = await Highligh.json();
 
