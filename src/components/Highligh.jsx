@@ -8,8 +8,8 @@ export default function Highligh(props) {
       </div>
       <div className="flex flex-col   absolute w-[598px] h-[252px] bg-white border top-[328px] left-4  rounded-xl">
         <div className="w-[518px] h-[80px] px-10 py-10">
-          <p className="bg-[#4B6BFB] w-[86px] h-[28px]  text-xs font-medium rounded-md text-center items-center flex justify-center px-2.5 py-1 leading-tight">
-            Technology
+          <p className="bg-[#4B6BFB] w-[86px] h-[28px] text-white  text-xs font-medium rounded-md text-center items-center flex justify-center px-2.5 py-1 leading-tight">
+            {props.tag}
           </p>
           <p className="w-[518px] h-[80px]  text-[#181A2A] text-3xl not-italic font-semibold">
             {props.description}

@@ -6,11 +6,10 @@ import React from "react";
 export default function Header() {
   const router = useRouter();
   return (
-    <div className="flex  gap-28 h-[100px] justify-center m-auto text-center items-center  py-9 px-[350px]">
-      <div>
-        <p>
-          <img src="/Logo.svg" alt="" />
-        </p>
+    <div className="flex h-[100px] justify-between items-center  py-9 px-[350px]">
+      <div className="flex gap-2.5">
+        <img className="w-9 h-9" src="/Logo.svg" alt="" />
+        <img src="/MetaBlog.svg" alt="" />
       </div>
 
       <div className="flex gap-10 justify-center text-base items-center">
@@ -32,7 +31,7 @@ export default function Header() {
         >
           Contact
         </button>
-        <div className="h-[36px] bg-[#F4F4F5] bg-zinc-100 rounded-md px-[16px] py-[8px] gap-[12px] items-center flex">
+        <div className="h-[36px] bg-[#F4F4F5]  rounded-md px-[16px] py-[8px] gap-[12px] items-center flex">
           <input type="Search" className="bg-zinc-100" />
           <FiSearch />
         </div>
