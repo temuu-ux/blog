@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Blog from "@/components/Blog";
 import Footer from "@/components/Footer";
 import { useRouter } from "next/router";
+import React from "react";
 
 export default function Home(props) {
   const router = useRouter();
@@ -14,9 +15,6 @@ export default function Home(props) {
   console.log(posts3, "hi");
   return (
     <div className="flex flex-col m-auto gap-[100px] w-[1917px]">
-      <div className="m-auto w-[1917px]  ">
-        <Header />
-      </div>
       <div className="flex flex-col m-auto ">
         {posts1.map((highligh) => (
           <Highligh
@@ -35,7 +33,7 @@ export default function Home(props) {
           {posts2.map((card) => (
             <Card
               title={card.title}
-              url={card.cover_image}
+              url={card.social_image}
               tag={card.tag_list[0]}
             />
           ))}
@@ -64,7 +62,7 @@ export default function Home(props) {
                   tag={blog.tag_list[0]}
                   // title={blog.title}
                   // url={blog.cover_image}
-                  // date={new Date(blog.published_at).toLocaleDateString()}
+                  date={new Date(blog.published_at).toLocaleDateString()}
                   // name={blog.user.name}
                   // tag={blog.tag_list[0]}
                   // profile={blog.user.profile_image_90}
@@ -76,9 +74,6 @@ export default function Home(props) {
         <button className="flex m-auto border justify-center items-center w-[123px] h-12 px-3 py-5">
           Load More
         </button>
-      </div>
-      <div className="m-auto w-[1216px] h-[236px] ">
-        <Footer />
       </div>
     </div>
   );

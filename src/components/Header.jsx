@@ -19,18 +19,17 @@ export default function Header() {
         >
           Home
         </button>
-        <Link href={"/Blogjump"}>
+        <Link href={"/link/Blogjump"}>
           <button className="text-base font-normal text-[#3B3C4A] ">
             Blog
           </button>
         </Link>
 
-        <button
-          className="text-base font-normal text-[#3B3C4A]"
-          // onClick={() => router.push("/contact")}
-        >
-          Contact
-        </button>
+        <Link href={"/link/Contact"}>
+          <button className="text-base font-normal text-[#3B3C4A]">
+            Contact
+          </button>
+        </Link>
         <div className="h-[36px] bg-[#F4F4F5]  rounded-md px-[16px] py-[8px] gap-[12px] items-center flex">
           <input type="Search" className="bg-zinc-100" />
           <FiSearch />
