@@ -8,7 +8,7 @@ export default function Page({ designData }) {
 
   async function loadMoreHandler() {
     const response = await fetch(
-      `https://dev.to/api/articles?tag=design&per_page=12$page=${pageNumber}`
+      `https://dev.to/api/articles?tag=design&per_page=12&page=${pageNumber}`
     );
     const loadMore = await response.json();
 
@@ -21,8 +21,8 @@ export default function Page({ designData }) {
       <div className="flex m-auto gap-5 w-[1216px] flex-wrap">
         <p className="text-2xl text-[#181A2A] font-bold">Design</p>
         <AllLink />
-        {articles.map((aData) => {
-          return <Blog aData={aData} />;
+        {articles.map((designData) => {
+          return <Blog aData={designData} tag="design" />;
         })}
       </div>
       <button

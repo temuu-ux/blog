@@ -6,7 +6,7 @@ import React from "react";
 export default function Header() {
   const router = useRouter();
   return (
-    <div className="flex h-[100px] justify-between items-center  py-9 px-[350px]">
+    <div className="flex w-[1917px] h-[100px] justify-between items-center  py-9 px-[350px]">
       <div className="flex gap-2.5">
         <img className="w-9 h-9" src="/Logo.svg" alt="" />
         <img src="/MetaBlog.svg" alt="" />

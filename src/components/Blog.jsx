@@ -1,9 +1,8 @@
 import React from "react";
 
-export default function Blog({ aData, tag, date, profile }) {
+export default function Blog({ aData, tag, date }) {
   console.log("adata: ", aData);
-  
-  
+
   console.log("on sar", date);
   return (
     <div className="m-auto w-[392px] h-[476px] border rounded-xl p-4 gap-4 ">
@@ -18,13 +17,21 @@ export default function Blog({ aData, tag, date, profile }) {
           {aData.title}
         </p>
         <div className="flex gap-6 items-center">
-          <img className="w-10 h-10 rounded-3xl " src={profile} alt="" />
+          <img
+            className="w-10 h-10 rounded-3xl "
+            src={aData.user.profile_image}
+            alt=""
+          />
           <p className="text-[#97989F] text-base text-center  font-extralight">
             {aData.user.name}
           </p>
-          <p className="text-[#97989F] text-base font-extralight">{date}</p>
+          <p className="text-[#97989F] text-base font-extralight">
+            {new Date(aData.published_at).toLocaleDateString()}
+          </p>
         </div>
       </div>
+      
     </div>
+   
   );
 }
