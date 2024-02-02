@@ -1,6 +1,8 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function AllLink() {
+  const router = useRouter();
   return (
     <div className="flex items-cemter justify-between w-[1216px]">
       <div className="flex gap-5">
@@ -10,7 +12,7 @@ export default function AllLink() {
         <Link href={"/blog/design"}>
           <button className="text-xs text-[#495057] font-bold	">Design</button>
         </Link>
-        <Link href={"/travel"}>
+        <Link href={"/blog/travel"}>
           <button className="text-xs text-[#495057] font-bold	">Travel</button>
         </Link>
         <Link href={"/fashion"}>
@@ -27,7 +29,7 @@ export default function AllLink() {
       </div>
       <button
         className="text-xs text-[#495057] font-bold	"
-        onClick={() => router.push("/Blogjump")}
+        onClick={() => router.push("/link/Blogjump")}
       >
         View all
       </button>

@@ -17,12 +17,13 @@ const Blogjump = ({ posts3 }) => {
               <Blog
                 aData={blog}
                 tag={blog.tag_list[0]}
+                
                 // title={blog.title}
                 // url={blog.cover_image}
                 // date={new Date(blog.published_at).toLocaleDateString()}
                 // name={blog.user.name}
                 // tag={blog.tag_list[0]}
-                profile={blog.user.profile_image_90}
+                // profile={blog.user.profile_image_90}
               />
             ))}
           </div>
@@ -35,8 +36,8 @@ const Blogjump = ({ posts3 }) => {
   );
 };
 
-export async function getServerSideProps(context) {
-  const Blog = await fetch("https://dev.to/api/articles?per_page=15&top=1");
+export async function getServerSideProps() {
+  const Blog = await fetch("https://dev.to/api/articles?per_page=15&top=5");
   const posts3 = await Blog.json();
 
   return {

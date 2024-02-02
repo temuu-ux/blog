@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <div className="bg-[#E8E8EA] ">
@@ -19,9 +21,15 @@ export default function Footer() {
               </div>
             </div>
             <div className="w-[521px] h-[88px] flex flex-col gap-1 text-center">
-              <p>Home</p>
-              <p>Blog</p>
-              <p>Contact</p>
+              <Link href={"/"}>
+                <button>Home</button>
+              </Link>
+              <Link href={"/link/Blogjump"}>
+                <button>Blog</button>
+              </Link>
+              <Link href={"/link/Contact"}>
+                <button>Contact</button>
+              </Link>
             </div>
             <div className="flex gap-8 justify-start items-start">
               <img src="/F.svg" alt="" />

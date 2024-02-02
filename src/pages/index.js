@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Card from "@/components/Card";
 import Highligh from "@/components/Highligh";
-import Header from "@/components/Header";
+
 import Blog from "@/components/Blog";
-import Footer from "@/components/Footer";
+
 import { useRouter } from "next/router";
 import React from "react";
 
@@ -45,7 +45,7 @@ export default function Home(props) {
 
           <button
             className="text-xs text-[#495057] font-bold	"
-            onClick={() => router.push("/Blogjump")}
+            onClick={() => router.push("/link/Blogjump")}
           >
             View all
           </button>

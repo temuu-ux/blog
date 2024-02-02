@@ -21,8 +21,8 @@ export default function Page({ designData }) {
       <div className="flex m-auto gap-5 w-[1216px] flex-wrap">
         <p className="text-2xl text-[#181A2A] font-bold">Design</p>
         <AllLink />
-        {articles.map((designData) => {
-          return <Blog aData={designData} tag="design" />;
+        {articles.map((el) => {
+          return <Blog aData={el} tag="design" />;
         })}
       </div>
       <button
