@@ -17,6 +17,7 @@ export default function Home(props) {
       setArticles(article);
     }
     getArticle();
+    // asdfasdfasd;flkjasd;flkjaslkdjfhlakjwrhgoiuq2hyrolkjabsdlkvjhalwiurhgolkajwndelcijahspdiuhlakjshdflkanwldfkjhaoiusehf
   }, []);
 
   const router = useRouter();
