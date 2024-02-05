@@ -10,6 +10,7 @@ import React from "react";
 export default function Home(props) {
   const [articles, setArticles] = useState([]);
   const [articles2, setArticles2] = useState([]);
+  const [articles3, setArticles3] = useState([]);
   useEffect(() => {
     async function getArticle() {
       const res = await fetch("http://localhost:4000/api/highlight");
@@ -18,9 +19,13 @@ export default function Home(props) {
       const res2 = await fetch("http://localhost:4000/api/card");
       const article2 = await res2.json();
 
+      const res3 = await fetch("http:/localhost:4000/api/blog");
+      const article3 = await res3.json();
+
       console.log("odsvoso", setArticles);
       setArticles(article);
       setArticles2(article2);
+      setArticles3(article3);
     }
     getArticle();
   }, []);
@@ -70,7 +75,8 @@ export default function Home(props) {
             View all
           </button>
 
-          <div className="flex m-auto gap-5 w-[1216px] flex-wrap">
+          <div className="flex m-auto gap-5 w-[1216px] flex-wrap text-start">
+            {/* <p>{articles3.title}</p> */}
             {posts3.map((blog) => {
               console.log(
                 "blog.user.profile_image_90",
@@ -106,7 +112,7 @@ export async function getStaticProps() {
   const Card = await fetch("http://localhost:4000/api/card");
   const posts2 = await Card.json();
 
-  const Blog = await fetch("https://dev.to/api/articles?per_page=15&top=5");
+  const Blog = await fetch("http://localhost:4000/api/blog");
   const posts3 = await Blog.json();
 
   return {

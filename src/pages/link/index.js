@@ -15,15 +15,15 @@ export default function AllLink() {
         <Link href={"/blog/travel"}>
           <button className="text-xs text-[#495057] font-bold	">Travel</button>
         </Link>
-        <Link href={"/fashion"}>
+        <Link href={"/blog/fashion"}>
           <button className="text-xs text-[#495057] font-bold	">Fashion</button>
         </Link>
-        <Link href={"/technology"}>
+        <Link href={"/blog/technology"}>
           <button className="text-xs text-[#495057] font-bold	">
             Technology
           </button>
         </Link>
-        <Link href={"/branding"}>
+        <Link href={"/blog/branding"}>
           <button className="text-xs text-[#495057] font-bold	">Branding</button>
         </Link>
       </div>
