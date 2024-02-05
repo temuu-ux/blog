@@ -9,18 +9,20 @@ import React from "react";
 
 export default function Home(props) {
   const [articles, setArticles] = useState([]);
+  const [articles2, setArticles2] = useState([]);
   useEffect(() => {
     async function getArticle() {
-      const res = await fetch("http://localhost:4000/api/bolgs");
+      const res = await fetch("http://localhost:4000/api/highlight");
       const article = await res.json();
+
+      const res2 = await fetch("http://localhost:4000/api/card");
+      const article2 = await res2.json();
+
       console.log("odsvoso", setArticles);
       setArticles(article);
+      setArticles2(article2);
     }
     getArticle();
-    // asdfasdfasd;flkjasd;flkjaslkdjfhlakjwrhgoiuq2hyrolkjabsdlkvjhalwiurhgolkajwndelcijahspdiuhlakjshdflkanwldfkjhaoiusehf
-    // asdfasdfasd;flkjasd;flkjaslkdjfhlakjwrhgoiuq2hyrolkjabsdlkvjhalwiurhgolkajwndelcijahspdiuhlakjshdflkanwldfkjhaoiusehf
-    // asdfasdfasd;flkjasd;flkjaslkdjfhlakjwrhgoiuq2hyrolkjabsdlkvjhalwiurhgolkajwndelcijahspdiuhlakjshdflkanwldfkjhaoiusehf
-    // asdfasdfasd;flkjasd;flkjaslkdjfhlakjwrhgoiuq2hyrolkjabsdlkvjhalwiurhgolkajwndelcijahspdiuhlakjshdflkanwldfkjhaoiusehf
   }, []);
 
   const router = useRouter();
@@ -47,6 +49,7 @@ export default function Home(props) {
           Trending
         </p>
         <div className="flex  w-[1231px] gap-6 m-auto justify-center items-center">
+          <p>{articles2.title}</p>
           {posts2.map((card) => (
             <Card
               title={card.title}
@@ -97,10 +100,10 @@ export default function Home(props) {
 }
 
 export async function getStaticProps() {
-  const Highligh = await fetch("https://dev.to/api/articles?per_page=1&top=1");
+  const Highligh = await fetch("http://localhost:4000/api/highlight");
   const posts1 = await Highligh.json();
 
-  const Card = await fetch("https://dev.to/api/articles?per_page=4&top=3");
+  const Card = await fetch("http://localhost:4000/api/card");
   const posts2 = await Card.json();
 
   const Blog = await fetch("https://dev.to/api/articles?per_page=15&top=5");
