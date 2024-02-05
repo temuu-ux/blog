@@ -15,7 +15,7 @@ export default function Blog({ aData, tag, date }) {
           <p className="bg-indigo-500/5 text-center text-indigo-500 w-[120px] h-[28px] text-sm px-[10px] py-[4px] rounded-md">
             {tag}
           </p>
-          <p className="w-[230px]  albaar  text-black text-lg font-semibold font-['Work Sans'] leading-7">
+          <p className="w-[334px] h-[84px] overflow-hidden  albaar  text-black text-lg font-semibold font-['Work Sans'] leading-7">
             {aData.title}
           </p>
           <div className="flex gap-6 items-center">

@@ -3,19 +3,32 @@ import Card from "@/components/Card";
 import Highligh from "@/components/Highligh";
 
 import Blog from "@/components/Blog";
-
+import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import React from "react";
 
 export default function Home(props) {
+  const [articles, setArticles] = useState([]);
+  useEffect(() => {
+    async function getArticle() {
+      const res = await fetch("http://localhost:4000/api/bolgs");
+      const article = await res.json();
+      console.log("odsvoso", setArticles);
+      setArticles(article);
+    }
+    getArticle();
+  }, []);
+
   const router = useRouter();
   const { posts1, posts2, posts3 } = props;
   console.log(posts1, "posts1");
   console.log(posts2);
   console.log(posts3, "hi");
+
   return (
     <div className="flex flex-col m-auto gap-[100px] ">
       <div className="flex flex-col m-auto ">
+        <p>{articles.title}</p>
         {posts1.map((highligh) => (
           <Highligh
             description={highligh.description}

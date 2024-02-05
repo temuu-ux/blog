@@ -1,5 +1,5 @@
 import Link from "next/link";
-export default function Custom404() {
+export default function Page() {
   return (
     <div className="w-[600px] flex m-auto gap-[40px]">
       <p className=" text-7xl">404</p>
