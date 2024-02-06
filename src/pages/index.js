@@ -8,27 +8,29 @@ import { useRouter } from "next/router";
 import React from "react";
 
 export default function Home(props) {
-  const [articles, setArticles] = useState([]);
-  const [articles2, setArticles2] = useState([]);
-  const [articles3, setArticles3] = useState([]);
-  useEffect(() => {
-    async function getArticle() {
-      const res = await fetch("http://localhost:4000/api/highlight");
-      const article = await res.json();
+  const [articles, setArticles] = useState();
+  // const [articles2, setArticles2] = useState([]);
+  // const [articles3, setArticles3] = useState([]);
+  // useEffect(() => {
+  //   async function getArticle() {
+  //     const res = await fetch("http://localhost:4000/api/highlight");
+  //     const data = await res.json();
+  //     console.log("res", res);
 
-      const res2 = await fetch("http://localhost:4000/api/card");
-      const article2 = await res2.json();
+  //     // const res2 = await fetch("http://localhost:4000/api/card");
+  //     // const article2 = await res2.json();
 
-      const res3 = await fetch("http:/localhost:4000/api/blog");
-      const article3 = await res3.json();
+  //     // const res3 = await fetch("http:/localhost:4000/api/blog");
+  //     // const article3 = await res3.json();
 
-      console.log("odsvoso", setArticles);
-      setArticles(article);
-      setArticles2(article2);
-      setArticles3(article3);
-    }
-    getArticle();
-  }, []);
+  //     console.log("logging data:", data);
+  //     setArticles(data);
+  //     console.log("odsvoso", articles);
+  //     // setArticles2(article2);
+  //     // setArticles3(article3);
+  //   }
+  //   getArticle();
+  // }, []);
 
   const router = useRouter();
   const { posts1, posts2, posts3 } = props;
@@ -39,7 +41,6 @@ export default function Home(props) {
   return (
     <div className="flex flex-col m-auto gap-[100px] ">
       <div className="flex flex-col m-auto ">
-        <p>{articles.title}</p>
         {posts1.map((highligh) => (
           <Highligh
             description={highligh.description}
@@ -54,7 +55,6 @@ export default function Home(props) {
           Trending
         </p>
         <div className="flex  w-[1231px] gap-6 m-auto justify-center items-center">
-          <p>{articles2.title}</p>
           {posts2.map((card) => (
             <Card
               title={card.title}
@@ -76,7 +76,6 @@ export default function Home(props) {
           </button>
 
           <div className="flex m-auto gap-5 w-[1216px] flex-wrap text-start">
-            {/* <p>{articles3.title}</p> */}
             {posts3.map((blog) => {
               console.log(
                 "blog.user.profile_image_90",

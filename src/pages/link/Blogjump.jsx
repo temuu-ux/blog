@@ -7,19 +7,19 @@ import AllLink from "@/pages/link/index.js";
 import { useEffect, useState } from "react";
 
 const Blogjump = ({ posts3 }) => {
-  const [articles, setArticles] = useState([]);
-  useEffect(() => {
-    async function getArticle() {
-      const res = await fetch("http://localhost:4000/api/blogjump");
-      const jump = await res.json();
-      console.log("isuhosuvgb", setArticles);
-      setArticles(jump);
-    }
-    getArticle();
-  }, []);
+  // const [articles, setArticles] = useState([]);
+  // useEffect(() => {
+  //   async function getArticle() {
+  //     const res = await fetch("http://localhost:4000/api/blogjump");
+  //     const jump = await res.json();
+  //     console.log("isuhosuvgb", setArticles);
+  //     setArticles(jump);
+  //   }
+  //   getArticle();
+  // }, []);
 
   return (
-    <Link href={`/blog/article/${aData.id}`}>
+    <Link href={`/blog/article/id`}>
       {" "}
       <div className="flex flex-col w-[1930px] m-auto gap-[100px]">
         <div className="flex flex-col gap-[100px]">
@@ -27,7 +27,7 @@ const Blogjump = ({ posts3 }) => {
             <p className="text-2xl text-[#181A2A] font-bold">All post</p>
             <AllLink />
             <div className="flex m-auto gap-5 w-[1216px] flex-wrap">
-              <p>{articles.title}</p>
+              {/* <p>{articles.title}</p>  */}
               {posts3.map((blog) => (
                 <Blog
                   aData={blog}
