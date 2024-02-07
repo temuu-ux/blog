@@ -1,29 +1,27 @@
-// dispatchEvent
-import Blog from "@/components/Blog";
-import AllLink from "@/pages/link/index.js";
+import AllLink from "../link";
 import React, { useState } from "react";
+import Blog from "@/components/Blog";
 
-export default function Page({ designData }) {
-  const [articles, setArticles] = useState(designData);
+export default function Page({ brandData }) {
+  const [title, setTitle] = useState(brandData);
   const [pageNumber, setPageNunvber] = useState(2);
 
   async function loadMoreHandler() {
     const response = await fetch(
-      `https://dev.to/api/articles?tag=design&per_page=12&page=${pageNumber}`
+      `https://dev.to/api/articles?tag=branding&per_page=12&${pageNumber}`
     );
     const loadMore = await response.json();
 
-    setArticles([...articles, ...loadMore]);
+    setTitle([...title, ...loadMore]);
     setPageNunvber([pageNumber + 1]);
   }
-
   return (
     <div className="flex flex-col gap-24">
       <div className="flex m-auto gap-5 w-[1216px] flex-wrap">
-        <p className="text-2xl text-[#181A2A] font-bold">Design</p>
+        <p className="text-2xl text-[#181A2A] font-bold">Barnding</p>
         <AllLink />
-        {articles.map((el) => {
-          return <Blog aData={el} tag="design" />;
+        {title.map((e) => {
+          return <Blog aData={e} tag="branding" />;
         })}
       </div>
       <button
@@ -37,10 +35,11 @@ export default function Page({ designData }) {
 }
 
 export const getServerSideProps = async () => {
-  const res = await fetch("https://dev.to/api/articles?tag=design&per_page=12");
-  const designData = await res.json();
-
+  const res = await fetch(
+    `https://dev.to/api/articles?tag=branding&per_page=12`
+  );
+  const brandData = await res.json();
   return {
-    props: { designData },
+    props: { brandData },
   };
 };

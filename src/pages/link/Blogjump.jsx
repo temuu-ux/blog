@@ -7,17 +7,6 @@ import AllLink from "@/pages/link/index.js";
 import { useEffect, useState } from "react";
 
 const Blogjump = ({ posts3 }) => {
-  // const [articles, setArticles] = useState([]);
-  // useEffect(() => {
-  //   async function getArticle() {
-  //     const res = await fetch("http://localhost:4000/api/blogjump");
-  //     const jump = await res.json();
-  //     console.log("isuhosuvgb", setArticles);
-  //     setArticles(jump);
-  //   }
-  //   getArticle();
-  // }, []);
-
   return (
     <Link href={`/blog/article/id`}>
       {" "}
@@ -29,17 +18,7 @@ const Blogjump = ({ posts3 }) => {
             <div className="flex m-auto gap-5 w-[1216px] flex-wrap">
               {/* <p>{articles.title}</p>  */}
               {posts3.map((blog) => (
-                <Blog
-                  aData={blog}
-                  tag={blog.tag_list[0]}
-
-                  // title={blog.title}
-                  // url={blog.cover_image}
-                  // date={new Date(blog.published_at).toLocaleDateString()}
-                  // name={blog.user.name}
-                  // tag={blog.tag_list[0]}
-                  // profile={blog.user.profile_image_90}
-                />
+                <Blog aData={blog} tag={blog.tag_list[0]} />
               ))}
             </div>
           </div>
@@ -53,7 +32,7 @@ const Blogjump = ({ posts3 }) => {
 };
 
 export async function getServerSideProps() {
-  const Blog = await fetch("http://localhost:4000/api/blogjump");
+  const Blog = await fetch("https://dev.to/api/articles?per_page=15&top=5");
   const posts3 = await Blog.json();
 
   return {

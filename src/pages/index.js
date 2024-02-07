@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
 import React from "react";
 
 export default function Home(props) {
-  const [articles, setArticles] = useState();
+  // const [articles, setArticles] = useState();
   // const [articles2, setArticles2] = useState([]);
   // const [articles3, setArticles3] = useState([]);
   // useEffect(() => {
@@ -105,13 +105,13 @@ export default function Home(props) {
 }
 
 export async function getStaticProps() {
-  const Highligh = await fetch("http://localhost:4000/api/highlight");
+  const Highligh = await fetch("https://dev.to/api/articles?per_page=1&top=1");
   const posts1 = await Highligh.json();
 
-  const Card = await fetch("http://localhost:4000/api/card");
+  const Card = await fetch("https://dev.to/api/articles?per_page=4&top=3");
   const posts2 = await Card.json();
 
-  const Blog = await fetch("http://localhost:4000/api/blog");
+  const Blog = await fetch("https://dev.to/api/articles?per_page=15&top=5");
   const posts3 = await Blog.json();
 
   return {
