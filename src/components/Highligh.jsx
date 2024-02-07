@@ -1,24 +1,34 @@
-import React from "react";
-
 export default function Highligh(props) {
-  console.log("owiehcwoecbou", props);
   return (
-    <div className=" rounded-xl flex justify-center items-center m-auto  relative w-[1216px] h-[600px]">
-      <div className="w-[1216px] h-[600px]">
-        <img src={props.url} alt="" className="rounded-xl w-full h-full" />
+    <div className=" rounded-xl sm:flex sm:justify-center sm:items-center sm:m-auto  sm:relative sm:w-[1216px] sm:h-[600px] bg-gray-100">
+      <div class="carousel w-full">
+        <div id="slide1" class="carousel-item relative w-full">
+          <img
+            src={props.url}
+            className="rounded-xl sm:w-[1206px] sm:h-[590px]"
+          />
+        </div>
       </div>
-      <div className="flex flex-col   absolute w-[598px] h-[252px] bg-white border top-[328px] left-4  rounded-xl">
-        <div className="w-[518px] h-[80px] gap-3 flex flex-col px-10 py-10">
-          <p className="bg-[#4B6BFB] w-[86px] h-[30px] text-white  text-xs font-medium rounded-md text-center items-center flex justify-center px-2.5 py-1 leading-tight">
+      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+        <a href="#slide4" class="btn btn-circle">
+          ❮
+        </a>
+        <a href="#slide2" class="btn btn-circle">
+          ❯
+        </a>
+      </div>
+      <div className=" sm:flex sm:flex-col   sm:absolute sm:w-[598px] sm:h-[252px] sm:bg-white sm:border sm:top-[328px] sm:left-4  rounded-xl">
+        <div className="sm:w-[518px] sm:h-[80px] sm:gap-3 sm:flex sm:flex-col sm:px-10 sm:py-10">
+          <p className="sm:bg-[#4B6BFB] sm:w-[86px] sm:h-[30px] sm:text-white   sm:text-xs sm:font-medium sm:rounded-md sm:text-center sm:items-center sm:flex sm:justify-center sm:px-2.5 sm:py-1 sm:leading-tight">
             {props.tag} kgig
           </p>
-          <p className="w-[518px] h-[80px]  text-[#181A2A] text-3xl not-italic font-semibold">
+          <p className="sm:w-[518px] sm:h-[80px]  sm:text-[#181A2A] sm:text-3xl sm:not-italic sm:font-semibold">
             {props.description}
           </p>
         </div>
 
         <div>
-          <p className="text-[#97989F] text-base font-normal w-[126px] h-[24px] text-center flex top-40 absolute  px-10 py-10   not-italic">
+          <p className="sm:text-[#97989F] sm:text-base sm:font-normal sm:w-[126px] sm:h-[24px] sm:text-center sm:flex sm:top-40 sm:absolute  sm:px-10 sm:py-10   sm:not-italic">
             {props.date}
           </p>
         </div>

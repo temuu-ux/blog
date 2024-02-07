@@ -8,7 +8,7 @@ export default function Page({ brandData }) {
 
   async function loadMoreHandler() {
     const response = await fetch(
-      `https://dev.to/api/articles?tag=branding&per_page=12&${pageNumber}`
+      `https://dev.to/api/articles?tag=branding&per_page=12&page=${pageNumber}`
     );
     const loadMore = await response.json();
 
@@ -18,7 +18,7 @@ export default function Page({ brandData }) {
   return (
     <div className="flex flex-col gap-24">
       <div className="flex m-auto gap-5 w-[1216px] flex-wrap">
-        <p className="text-2xl text-[#181A2A] font-bold">Barnding</p>
+        <p className="text-2xl text-[#181A2A] font-bold">Branding</p>
         <AllLink />
         {title.map((e) => {
           return <Blog aData={e} tag="branding" />;

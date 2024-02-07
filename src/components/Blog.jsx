@@ -33,6 +33,7 @@ export default function Blog({ aData, tag, date }) {
           </div>
         </div>
       </div>
+    
     </Link>
   );
 }

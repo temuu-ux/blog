@@ -11,7 +11,7 @@ export default function Page({ fashionData }) {
 
   async function loadMoreHandler() {
     const res = await fetch(
-      `https://dev.to/api/articles?tag=fashion&per_page=12&${pageNumber}`
+      `https://dev.to/api/articles?tag=fashion&per_page=12&page=${pageNumber}`
     );
     const loadMore = await res.json();
 

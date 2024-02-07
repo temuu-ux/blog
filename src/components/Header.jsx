@@ -6,15 +6,15 @@ import React from "react";
 export default function Header() {
   const router = useRouter();
   return (
-    <div className="flex w-[1917px] h-[100px] justify-between items-center  py-9 px-[350px]">
-      <Link href={"/"}>
-        <div className="flex ">
-          <button className="flex gap-2.5 items-center ">
+    <div className="sm:flex  sm:h-[100px] sm:justify-between sm:items-center  sm:py-9 sm:px-[350px]">
+      <div className="sm:flex ">
+        <Link href={"/"}>
+          <button className="flex  gap-2.5 items-center ">
             <img className="w-9 h-9" src="/Logo.svg" alt="" />
-            <img src="/MetaBlog.svg" alt="" />
+            <img src="/MetaBlog.svg" alt="" />{" "}
           </button>
-        </div>
-      </Link>
+        </Link>
+      </div>
 
       <div className="flex gap-10 justify-center text-base items-center">
         <button
@@ -35,7 +35,7 @@ export default function Header() {
           </button>
         </Link>
         <div className="h-[36px] bg-[#F4F4F5]  rounded-md px-[16px] py-[8px] gap-[12px] items-center flex">
-          <input type="Search" className="bg-zinc-100" />
+          <input placeholder="Search" type="Search" className="bg-zinc-100" />
           <FiSearch />
         </div>
       </div>

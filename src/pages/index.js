@@ -34,13 +34,14 @@ export default function Home(props) {
 
   const router = useRouter();
   const { posts1, posts2, posts3 } = props;
-  console.log(posts1, "posts1");
-  console.log(posts2);
-  console.log(posts3, "hi");
+
+  // console.log(posts1, "posts1");
+  // console.log(posts2);
+  // console.log(posts3, "hi");
 
   return (
-    <div className="flex flex-col m-auto gap-[100px] ">
-      <div className="flex flex-col m-auto ">
+    <div className="sm:flex sm:flex-col sm:m-auto sm:gap-[100px] sm:w-[1231px]">
+      <div>
         {posts1.map((highligh) => (
           <Highligh
             description={highligh.description}
@@ -51,10 +52,10 @@ export default function Home(props) {
         ))}
       </div>
       <div>
-        <p className="flex w-[1231px] m-auto text-2xl text-[#181A2A] font-bold">
+        <p className="sm:flex  sm:text-2xl sm:text-[#181A2A] sm:font-bold">
           Trending
         </p>
-        <div className="flex  w-[1231px] gap-6 m-auto justify-center items-center">
+        <div className="sm:flex  sm:justify-between">
           {posts2.map((card) => (
             <Card
               title={card.title}
@@ -64,23 +65,19 @@ export default function Home(props) {
           ))}
         </div>
       </div>
-      <div className="flex flex-col gap-[100px]">
-        <div className="flex m-auto gap-5 w-[1216px] flex-wrap justify-between py-5">
-          <p className="text-2xl text-[#181A2A] font-bold">All post</p>
+      <div className="sm:flex sm:flex-col ">
+        <div className="sm:flex sm:flex-col  sm:gap-5  sm;flex-wrap  sm:py-5">
+          <p className="sm:text-2xl sm:text-[#181A2A] sm:font-bold">All post</p>
 
           <button
-            className="text-xs text-[#495057] font-bold	"
+            className="sm:text-xs sm:text-[#495057] sm:font-bold	sm:justify-end sm:flex"
             onClick={() => router.push("/link/Blogjump")}
           >
             View all
           </button>
 
-          <div className="flex m-auto gap-5 w-[1216px] flex-wrap text-start">
+          <div className="sm:flex  sm:gap-5  sm:flex-wrap">
             {posts3.map((blog) => {
-              console.log(
-                "blog.user.profile_image_90",
-                blog.user.profile_image_90
-              );
               return (
                 <Blog
                   aData={blog}
@@ -96,16 +93,16 @@ export default function Home(props) {
             })}
           </div>
         </div>
-        <button className="flex m-auto border justify-center items-center w-[123px] h-12 px-3 py-5">
-          Load More
-        </button>
       </div>
+      <button className="flex m-auto border justify-center rounded-md text-[#696A75] items-center w-[123px] h-12 px-3 py-5">
+        Load More
+      </button>
     </div>
   );
 }
 
 export async function getStaticProps() {
-  const Highligh = await fetch("https://dev.to/api/articles?per_page=1&top=1");
+  const Highligh = await fetch("https://dev.to/api/articles?per_page=1&top=4");
   const posts1 = await Highligh.json();
 
   const Card = await fetch("https://dev.to/api/articles?per_page=4&top=3");
