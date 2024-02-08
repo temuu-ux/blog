@@ -4,7 +4,7 @@ export default function Card(props) {
   return (
     <div className="w-[293px] h-[330px]  rounded-xl  flex-col pt-8 inline-flex relative borde">
       <div
-        className="w-[280px] h-[320px] rounded-xl "
+        className="w-[280px] h-[320px]  rounded-xl "
         style={{
           backgroundImage: `url(${props.url})`,
           backgroundSize: "auto",
@@ -17,7 +17,7 @@ export default function Card(props) {
               {props.tag}
             </p>
 
-            <div className="self-stretch  text-lg font-semibold  leading-7 text-[white]">
+            <div className="self-stretch  text-lg font-semibold  leading-7 text-gray-50">
               {props.title}
             </div>
           </div>

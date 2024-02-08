@@ -23,7 +23,7 @@ export default function Header() {
         >
           Home
         </button>
-        <Link href={"/link/Blogjump"}>
+        <Link href={"/blog/all"}>
           <button className="text-base font-normal text-[#3B3C4A] ">
             Blog
           </button>

@@ -6,7 +6,7 @@ export default function AllLink() {
   return (
     <div className="flex items-cemter justify-between w-[1216px]">
       <div className="flex gap-5">
-        <Link href={"/link/Blogjump"}>
+        <Link href={"/blog/all"}>
           <button className="text-xs text-[#495057] hover:text-[#D4A373] font-bold	">
             All
           </button>
@@ -39,7 +39,7 @@ export default function AllLink() {
       </div>
       <button
         className="text-xs text-[#495057] font-bold hover:text-[#D4A373] 	"
-        onClick={() => router.push("/link/Blogjump")}
+        onClick={() => router.push("/blog/all")}
       >
         View all
       </button>

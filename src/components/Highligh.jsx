@@ -20,9 +20,9 @@ export default function Highligh(props) {
       <div className=" sm:flex sm:flex-col   sm:absolute sm:w-[598px] sm:h-[252px] sm:bg-white sm:border sm:top-[328px] sm:left-4  rounded-xl">
         <div className="sm:w-[518px] sm:h-[80px] sm:gap-3 sm:flex sm:flex-col sm:px-10 sm:py-10">
           <p className="sm:bg-[#4B6BFB] sm:w-[86px] sm:h-[30px] sm:text-white   sm:text-xs sm:font-medium sm:rounded-md sm:text-center sm:items-center sm:flex sm:justify-center sm:px-2.5 sm:py-1 sm:leading-tight">
-            {props.tag} kgig
+            {props.tag}
           </p>
-          <p className="sm:w-[518px] sm:h-[80px]  sm:text-[#181A2A] sm:text-3xl sm:not-italic sm:font-semibold">
+          <p className="sm:w-[518px] sm:overflow-text sm:h-[50px]   sm:text-[#181A2A] sm:text-3xl sm:not-italic sm:font-semibold">
             {props.description}
           </p>
         </div>

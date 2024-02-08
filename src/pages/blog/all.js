@@ -1,0 +1,43 @@
+import AllLink from "../link";
+import Blog from "@/components/Blog";
+import React, { useState } from "react";
+
+export default function Page({ allData }) {
+  const [tag, setTag] = useState(allData);
+  const [pageNumber, setPageNumber] = useState(2);
+
+  async function loadMoreHandler() {
+    const res = await fetch(
+      `https://dev.to/api/articles?per_page=12&page=${pageNumber}`
+    );
+    const load = await res.json();
+    setTag([...tag, ...load]);
+    setPageNumber([pageNumber + 1]);
+  }
+
+  return (
+    <div className="flex flex-col gap-24">
+      <div className="flex m-auto gap-5 w-[1216px] flex-wrap">
+        <p className="text-2xl text-[#181A2A] font-bold">All post</p>
+        <AllLink />
+        {tag.map((e) => {
+          return <Blog aData={e} />;
+        })}
+      </div>
+      <button
+        className="flex m-auto border justify-center items-center w-[123px] h-12 px-3 py-5"
+        onClick={loadMoreHandler}
+      >
+        Load More
+      </button>
+    </div>
+  );
+}
+
+export const getServerSideProps = async () => {
+  const res = await fetch(`https://dev.to/api/articles?&per_page=12`);
+  const allData = await res.json();
+  return {
+    props: { allData },
+  };
+};

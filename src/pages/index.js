@@ -66,15 +66,19 @@ export default function Home(props) {
         </div>
       </div>
       <div className="sm:flex sm:flex-col ">
-        <div className="sm:flex sm:flex-col  sm:gap-5  sm;flex-wrap  sm:py-5">
-          <p className="sm:text-2xl sm:text-[#181A2A] sm:font-bold">All post</p>
+        <div className="sm:flex sm:flex-col  sm:gap-5  sm;flex-wrap  ">
+          <div className="sm:flex sm:justify-between sm:py-5">
+            <p className="sm:text-2xl sm:text-[#181A2A] sm:font-bold">
+              All blog post
+            </p>
 
-          <button
-            className="sm:text-xs sm:text-[#495057] sm:font-bold	sm:justify-end sm:flex"
-            onClick={() => router.push("/link/Blogjump")}
-          >
-            View all
-          </button>
+            <button
+              className="sm:text-xs sm:text-[#495057] sm:font-bold	 sm:flex sm:justify-center sm:items-end hover:text-[#D4A373]"
+              onClick={() => router.push("/blog/all")}
+            >
+              View all
+            </button>
+          </div>
 
           <div className="sm:flex  sm:gap-5  sm:flex-wrap">
             {posts3.map((blog) => {
@@ -94,18 +98,15 @@ export default function Home(props) {
           </div>
         </div>
       </div>
-      <button className="flex m-auto border justify-center rounded-md text-[#696A75] items-center w-[123px] h-12 px-3 py-5">
-        Load More
-      </button>
     </div>
   );
 }
 
 export async function getStaticProps() {
-  const Highligh = await fetch("https://dev.to/api/articles?per_page=1&top=4");
+  const Highligh = await fetch("https://dev.to/api/articles?per_page=1&top=1");
   const posts1 = await Highligh.json();
 
-  const Card = await fetch("https://dev.to/api/articles?per_page=4&top=3");
+  const Card = await fetch("https://dev.to/api/articles?per_page=4&top=4");
   const posts2 = await Card.json();
 
   const Blog = await fetch("https://dev.to/api/articles?per_page=15&top=5");
