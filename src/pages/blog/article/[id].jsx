@@ -2,7 +2,7 @@ import React from "react";
 import parse from "html-react-parser";
 
 export default function Page({ data }) {
-  console.log("data:", data.body_html);
+  // console.log("data:", data.body_html);
 
   return (
     <div className="w-[800px] gap-[32px] m-auto flex flex-col">

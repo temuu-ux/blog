@@ -1,10 +1,9 @@
 import Link from "next/link";
 import React from "react";
 
-export default function Blog({ aData, tag, date }) {
-  console.log("adata: ", aData);
+export default function Blog({ aData, tag }) {
+  // console.log("adata: ", aData);
 
-  console.log("on sar", date);
   return (
     <Link href={`/blog/article/${aData.id}`}>
       <div className="m-auto w-[392px] h-[476px] border-2 rounded-xl p-4 gap-4 ">

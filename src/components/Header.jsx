@@ -6,7 +6,7 @@ import React from "react";
 export default function Header() {
   const router = useRouter();
   return (
-    <div className="sm:flex  sm:h-[100px] sm:justify-between sm:items-center  sm:py-9 sm:px-[350px]">
+    <div className="sm:flex m-auto w-[1231px]  sm:h-[100px] justify-between sm:items-center  sm:py-9 ">
       <div className="sm:flex ">
         <Link href={"/"}>
           <button className="flex  gap-2.5 items-center ">

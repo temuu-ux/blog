@@ -5,8 +5,8 @@ import { useState } from "react";
 export default function Page({ techData }) {
   const [articles, setArticles] = useState(techData);
   const [pageNumber, setPageNumber] = useState(2);
-  console.log("tech", techData);
-  console.log("article", articles);
+  // console.log("tech", techData);
+  // console.log("article", articles);
 
   async function loadMoreHandler() {
     const response = await fetch(

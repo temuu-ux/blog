@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Card(props) {
   return (
-    <div className="w-[293px] h-[330px]  rounded-xl  flex-col pt-8 inline-flex relative borde">
+    <div className="w-[293px] h-[330px]  rounded-xl  flex-col pt-8 inline-flex relative border">
       <div
         className="w-[280px] h-[320px]  rounded-xl "
         style={{

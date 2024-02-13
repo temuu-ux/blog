@@ -3,8 +3,8 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <div className="bg-[#E8E8EA] ">
-      <div className="  w-[1917px] m-auto py-16 px-80">
-        <div className="flex flex-col gap-6 w-[1216px] m-auto ">
+      <div className="  sm:w-[1917px] m-auto py-16 px-80">
+        <div className="flex flex-col gap-6 sm:w-[1216px] m-auto ">
           <div className="flex justify-between">
             <div className="flex flex-col gap-6">
               <div>

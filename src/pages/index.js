@@ -40,8 +40,8 @@ export default function Home(props) {
   // console.log(posts3, "hi");
 
   return (
-    <div className="sm:flex sm:flex-col sm:m-auto sm:gap-[100px] sm:w-[1231px]">
-      <div>
+    <div className="  sm:flex sm:flex-col sm:m-auto sm:gap-[100px] sm:w-[1231px]">
+      <div className=" hidden sm:inline-flex ">
         {posts1.map((highligh) => (
           <Highligh
             description={highligh.description}
@@ -51,7 +51,7 @@ export default function Home(props) {
           />
         ))}
       </div>
-      <div>
+      <div className="felx">
         <p className="sm:flex  sm:text-2xl sm:text-[#181A2A] sm:font-bold">
           Trending
         </p>

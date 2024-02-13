@@ -3,7 +3,7 @@ import Footer from "./Footer";
 
 export default function Layout({ children }) {
   return (
-    <div className=" flex flex-col w-[1930px] m-auto gap-[100px]">
+    <div className="w-[320px] felx-col justify-between sm:flex sm:flex-col  m-auto smgap-[100px]">
       <div>
         <Header />
       </div>

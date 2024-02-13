@@ -3,7 +3,7 @@ import AllLink from "../link";
 import React, { useState } from "react";
 
 export default function Page({ travelData }) {
-  console.log("titles", travelData);
+  // console.log("titles", travelData);
   const [titles, setTitles] = useState(travelData);
   const [pageNumber, setPageNunvber] = useState(2);
 
