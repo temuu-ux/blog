@@ -19,7 +19,7 @@ export default function Page({ travelData }) {
 
   return (
     <div className="flex flex-col gap-24">
-      <div className="flex m-auto gap-5 w-[1216px] flex-wrap">
+      <div className="flex flex-col gap-5 sm:flex sm:m-auto sm:gap-5 sm:w-[1216px] sm:flex-wrap">
         <p className="text-2xl text-[#181A2A] font-bold">Travel</p>
         <AllLink />
         {titles.map((el) => {

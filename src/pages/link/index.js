@@ -4,8 +4,8 @@ import { useRouter } from "next/router";
 export default function AllLink() {
   const router = useRouter();
   return (
-    <div className="flex items-cemter justify-between w-[1216px]">
-      <div className="flex gap-5">
+    <div className="sm:m-auto   sm:flex sm:items-center  sm:justify-between sm:w-[1216px]">
+      <div className="flex gap-2 sm:flex sm:gap-5">
         <Link href={"/blog/all"}>
           <button className="text-xs text-[#495057] hover:text-[#D4A373] font-bold	">
             All
@@ -38,7 +38,7 @@ export default function AllLink() {
         </Link>
       </div>
       <button
-        className="text-xs text-[#495057] font-bold hover:text-[#D4A373] 	"
+        className="text-xs text-[#495057] font-bold hover:text-[#D4A373] flex items-center 	"
         onClick={() => router.push("/blog/all")}
       >
         View all

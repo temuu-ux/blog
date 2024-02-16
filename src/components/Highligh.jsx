@@ -9,7 +9,7 @@ export default function Highligh(props) {
           />
         </div>
       </div>
-      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"></div>
+      {/* <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"></div> */}
       <div className=" sm:flex sm:flex-col   sm:absolute sm:w-[598px] sm:h-[252px] sm:bg-white sm:border sm:top-[328px] sm:left-4  rounded-xl">
         <div className="sm:w-[518px] sm:h-[80px] sm:gap-3 sm:flex sm:flex-col sm:px-10 sm:py-10">
           <p className="sm:bg-[#4B6BFB] sm:w-[86px] sm:h-[30px] sm:text-white   sm:text-xs sm:font-medium sm:rounded-md sm:text-center sm:items-center sm:flex sm:justify-center sm:px-2.5 sm:py-1 sm:leading-tight">

@@ -18,8 +18,8 @@ export default function Page({ designData }) {
 
   return (
     <div className="flex flex-col gap-24">
-      <div className="flex m-auto gap-5 w-[1216px] flex-wrap">
-        <p className="text-2xl text-[#181A2A] font-bold">Design</p>
+      <div className="flex flex-col gap-5 w-[320px] sm:flex sm:m-auto sm:gap-5 sm:w-[1216px] sm:flex-wrap">
+        <p className="  text-2xl text-[#181A2A] font-bold ">Design</p>
         <AllLink />
         {articles.map((el) => {
           return <Blog aData={el} tag="design" />;

@@ -6,8 +6,8 @@ import React from "react";
 export default function Header() {
   const router = useRouter();
   return (
-    <div className="sm:flex m-auto w-[1231px]  sm:h-[100px] justify-between sm:items-center  sm:py-9 ">
-      <div className="sm:flex ">
+    <div className="px-3 sm:flex sm:m-auto sm:w-[1231px]  sm:h-[100px] sm:justify-between sm:items-center  sm:py-9 ">
+      <div className=" sm:flex ">
         <Link href={"/"}>
           <button className="flex  gap-2.5 items-center ">
             <img className="w-9 h-9" src="/Logo.svg" alt="" />
@@ -16,7 +16,7 @@ export default function Header() {
         </Link>
       </div>
 
-      <div className="flex gap-10 justify-center text-base items-center">
+      <div className="  hidden  sm:gap-10 sm:justify-center sm:text-base sm:items-center  sm:flex sm:flex-row">
         <button
           className="text-base font-normal text-[#3B3C4A]"
           onClick={() => router.push("/")}
@@ -34,7 +34,7 @@ export default function Header() {
             Contact
           </button>
         </Link>
-        <div className="h-[36px] bg-[#F4F4F5]  rounded-md px-[16px] py-[8px] gap-[12px] items-center flex">
+        <div className=" w-10 h-10  rounded-md sm:h-[36px] bg-[#F4F4F5]  sm:rounded-md px-[16px] py-[8px] gap-[12px] sm:items-center flex">
           <input placeholder="Search" type="Search" className="bg-zinc-100" />
           <FiSearch />
         </div>

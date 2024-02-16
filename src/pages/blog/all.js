@@ -16,8 +16,8 @@ export default function Page({ allData }) {
   }
 
   return (
-    <div className="flex flex-col gap-24">
-      <div className="flex m-auto gap-5 w-[1216px] flex-wrap">
+    <div className="m-auto flex flex-col gap-24 ">
+      <div className="flex m-auto gap-5 w-[1231px]  flex-wrap">
         <p className="text-2xl text-[#181A2A] font-bold">All post</p>
         <AllLink />
         {tag.map((e) => {
