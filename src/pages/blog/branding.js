@@ -17,7 +17,7 @@ export default function Page({ brandData }) {
   }
   return (
     <div className="flex flex-col m-auto  gap-24">
-      <div className=" flex m-auto gap-5 w-[1231px] flex-wrap">
+      <div className=" flex flex-wrap w-[360px] m-auto gap-5 sm:w-[1231px] sm:flex-wrap">
         <p className="text-2xl text-[#181A2A] font-bold">Branding</p>
         <AllLink />
         {title.map((e) => {
