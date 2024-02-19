@@ -6,7 +6,7 @@ export default function Blog({ aData, tag }) {
 
   return (
     <Link href={`/blog/article/${aData.id}`}>
-      <div className="w-[350px] m-auto flex flex-col items-center  sm:m-auto sm:w-[392px] sm:h-[476px] border-2 rounded-xl p-4  ">
+      <div className="w-[350px] m-auto flex flex-col items-center  sm:m-auto sm:w-[392px] sm:h-[476px] border-2 rounded-xl p-4 shadow-lg hover:scale-110 ease-in-out duration-1000  hover:shadow-2xl ">
         <div className="w-[100%] h-[200px]  sm:w-[360px] sm:h-[240px] rounded-md">
           <img src={aData.social_image} className="w-full h-full" alt="" />
         </div>

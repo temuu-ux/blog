@@ -52,7 +52,7 @@ export default function Home(props) {
           </button>
         </div>
 
-        <div className="py-8 flex flex-wrap gap-5 justify-center sm:flex  sm:gap-5  sm:flex-wrap">
+        <div className="py-8 flex flex-wrap gap-5 justify-center sm:flex  sm:gap-[27px]  sm:flex-wrap">
           {posts3.map((blog) => {
             return (
               <Blog
@@ -91,3 +91,5 @@ export async function getStaticProps() {
     },
   };
 }
+
+

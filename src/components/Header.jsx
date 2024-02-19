@@ -8,8 +8,8 @@ import SideNavbar from "../components/SideNavbar";
 export default function Header() {
   const router = useRouter();
   return (
-    <div className="px-3 sm:flex sm:w-[1231px]  sm:h-[100px] sm:justify-between  sm:py-9 ">
-      <div className="flex items-center justify-between   sm:flex  ">
+    <div className="px-3 sm:flex sm:w-[1216px]  sm:h-[100px] sm:gap-[420px]  sm:py-9 ">
+      <div className="flex items-center justify-between w-[320px]  sm:flex  ">
         <Link href={"/"}>
           <button className="flex  gap-2.5 items-center ">
             <img className="w-9 h-9" src="/Logo.svg" alt="" />
@@ -39,8 +39,13 @@ export default function Header() {
             Contact
           </button>
         </Link>
-        <div className=" w-10 h-10  rounded-md sm:h-[36px] bg-[#F4F4F5]  sm:rounded-md px-[16px] py-[8px] gap-[12px] sm:items-center flex">
-          <input placeholder="Search" type="Search" className="bg-zinc-100" />
+
+        <div className="flex bg-zinc-100  rounded-md items-center">
+          <input
+            placeholder="Search"
+            type="text"
+            className="bg-zinc-100 py-2 px-1 "
+          />
           <FiSearch />
         </div>
       </div>

@@ -1,6 +1,6 @@
 const Page = () => {
   return (
-    <div className=" m-auto flex flex-col justify-between w-[320px] sm:w-[643px] sm:m-auto">
+    <div className=" m-auto flex flex-col justify-between w-[300px] sm:w-[643px] sm:m-auto">
       <div className="w-[320px] sm:w-[643px]  sm:m-auto sm:pt-[14px] sm:flex sm:flex-col  sm:items-start sm:gap-2 font-semibold ">
         <div className="flex flex-col gap-5">
           <h2 className="text-3xl">Contact Us</h2>
@@ -27,17 +27,17 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <div className="w-[320px]  sm:w-[643px] p-7 sm:h-[440px] m-auto sm:pt-[29px] sm:pr-[130xp] sm:pb-[26px] sm:pl-[35px] flex flex-col gap-6 bg-[#F6F6F7] rounded-xl">
+      <div className="w-[320px]  sm:w-[643px] p-7 sm:h-[470px] m-auto sm:pt-[29px] sm:pr-[130xp] sm:pb-[26px] sm:pl-[35px] flex flex-col gap-6 bg-[#F6F6F7] rounded-xl">
         <div className=" font-semib text-xl">Leave a Message</div>
         <div className="flex flex-col gap-5">
-          <div className="flex flex-col gap-4 sm:flex sm:w-[478px] sm:justify-between">
+          <div className="flex flex-col gap-4 sm:flex sm:flex-row sm:w-[478px] sm:justify-between">
             <input
-              className="py-[14px] px-5 rounded-md "
+              className="py-[14px] px-5 rounded-md"
               type="text"
               placeholder="Your Name"
             />
             <input
-              className="py-[14px] px-5 rounded-md"
+              className="py-[14px] px-5 rounded-md "
               type="text"
               placeholder="Your Email"
             />
@@ -56,7 +56,7 @@ const Page = () => {
               placeholder="Write a message"
             />
 
-            <button className="sm:mb-6 mt-5 p-2.5 flex justify-center items-center rounded-md text-white bg-[#4B6BFB] font-medium text-sm ">
+            <button className=" mt-5 p-2.5 flex justify-center items-center rounded-md text-white bg-[#4B6BFB] font-medium  text-sm ">
               Send Message
             </button>
           </div>

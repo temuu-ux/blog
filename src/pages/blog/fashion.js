@@ -28,7 +28,7 @@ export default function Page({ fashionData }) {
         })}
       </div>
       <button
-        className="flex m-auto border justify-center items-center w-[123px] h-12 px-3 py-5"
+        className="flex m-auto border justify-center items-center w-[123px] h-12 px-3 py-5 hover:scale-125 ease-in-out duration-500"
         onClick={loadMoreHandler}
       >
         Load More
