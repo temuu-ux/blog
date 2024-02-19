@@ -3,17 +3,22 @@ import { useRouter } from "next/router";
 import { FiSearch } from "react-icons/fi";
 import React from "react";
 
+import SideNavbar from "../components/SideNavbar";
+
 export default function Header() {
   const router = useRouter();
   return (
-    <div className="px-3 sm:flex sm:m-auto sm:w-[1231px]  sm:h-[100px] sm:justify-between sm:items-center  sm:py-9 ">
-      <div className=" sm:flex ">
+    <div className="px-3 sm:flex sm:w-[1231px]  sm:h-[100px] sm:justify-between  sm:py-9 ">
+      <div className="flex items-center justify-between   sm:flex  ">
         <Link href={"/"}>
           <button className="flex  gap-2.5 items-center ">
             <img className="w-9 h-9" src="/Logo.svg" alt="" />
             <img src="/MetaBlog.svg" alt="" />{" "}
           </button>
         </Link>
+        <div className="flex  items-end sm:hidden">
+          <SideNavbar />
+        </div>
       </div>
 
       <div className="  hidden  sm:gap-10 sm:justify-center sm:text-base sm:items-center  sm:flex sm:flex-row">

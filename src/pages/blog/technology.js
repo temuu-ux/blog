@@ -17,8 +17,8 @@ export default function Page({ techData }) {
     setPageNumber([pageNumber + 1]);
   }
   return (
-    <div className="flex flex-col gap-24">
-      <div className="flex  gap-5 sm:flex sm:m-auto sm:gap-5 sm:w-[1216px] sm:flex-wrap">
+    <div className="flex flex-col m-auto gap-24">
+      <div className="flex flex-wrap gap-5 m-auto w-[360px] sm:flex sm:m-auto sm:gap-5 sm:w-[1216px] sm:flex-wrap">
         <p className="text-2xl text-[#181A2A] font-bold">Technology</p>
         <AllLink />
         {articles.map((e) => {

@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <div className="">
-      <div className="py-8 sm:items-start sm:[100%]  sm:flex m-auto sm:py-16 sm:px-80 sm:m-auto sm:bg-[#E8E8EA] ">
+      <div className="py-8 flex flex-col justify-center items-center sm:items-start sm:[100%]  sm:flex m-auto sm:py-16 sm:px-80 sm:m-auto sm:bg-[#E8E8EA] ">
         <div className="flex flex-col gap-8 sm:flex sm:flex-col sm:gap-6  sm:m-auto sm:justify-start sm:items-start">
           <div className="flex  flex-col gap-10 sm:flex-row  sm:flex sm:justify-start">
             <div className="hidden  flex-row gap-6 sm:flex sm:flex-col sm:gap-6">
@@ -24,7 +24,7 @@ export default function Footer() {
               <Link href={"/"}>
                 <button>Home</button>
               </Link>
-              <Link href={"/link/Blogjump"}>
+              <Link href={"/blog/all"}>
                 <button>Blog</button>
               </Link>
               <Link href={"/link/Contact"}>

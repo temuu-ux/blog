@@ -8,30 +8,6 @@ import { useRouter } from "next/router";
 import React from "react";
 
 export default function Home(props) {
-  // const [articles, setArticles] = useState();
-  // const [articles2, setArticles2] = useState([]);
-  // const [articles3, setArticles3] = useState([]);
-  // useEffect(() => {
-  //   async function getArticle() {
-  //     const res = await fetch("http://localhost:4000/api/highlight");
-  //     const data = await res.json();
-  //     console.log("res", res);
-
-  //     // const res2 = await fetch("http://localhost:4000/api/card");
-  //     // const article2 = await res2.json();
-
-  //     // const res3 = await fetch("http:/localhost:4000/api/blog");
-  //     // const article3 = await res3.json();
-
-  //     console.log("logging data:", data);
-  //     setArticles(data);
-  //     console.log("odsvoso", articles);
-  //     // setArticles2(article2);
-  //     // setArticles3(article3);
-  //   }
-  //   getArticle();
-  // }, []);
-
   const router = useRouter();
   const { posts1, posts2, posts3 } = props;
 
@@ -40,7 +16,7 @@ export default function Home(props) {
   // console.log(posts3, "hi");
 
   return (
-    <div className="flex flex-col gap-[50px]  sm:flex sm:flex-col sm:m-auto sm:gap-[100px] sm:w-[1231px]">
+    <div className="flex flex-col gap-[50px]   sm:flex sm:flex-col sm:m-auto sm:gap-[100px] sm:w-[1231px]">
       <div className=" hidden sm:inline-flex ">
         {posts1.map((highligh) => (
           <Highligh
@@ -51,8 +27,8 @@ export default function Home(props) {
           />
         ))}
       </div>
-      <div className="felx">
-        <p className="text-[#1A1A1A] not-italic font-semibold  sm:flex  text-2xl sm:text-[#181A2A] sm:font-bold">
+      <div className=" m-auto sm:m-0">
+        <p className="text-[#1A1A1A] not-italic font-semibold flex text-center justify-start m-auto sm:flex  text-2xl sm:text-[#181A2A] sm:font-bold">
           Trending
         </p>
         <div className="flex justify-around items-center flex-col sm:flex sm:flex-row  sm:justify-between sm:w-[100%]">
@@ -61,37 +37,36 @@ export default function Home(props) {
           ))}
         </div>
       </div>
-      <div className="sm:flex sm:flex-col ">
-        <div className="  sm:flex sm:flex-col  sm:gap-5  sm:flex-wrap  ">
-          <div className="flex flex-col justify-between sm:flex sm:flex-col  sm:py-5">
-            <p className=" text-[#1A1A1A] not-italic font-semibold text-2xl sm:text-[#181A2A] sm:font-bold">
-              All blog post
-            </p>
 
-            <button
-              className="hidden sm:text-xs sm:text-[#495057] sm:font-bold	 sm:flex sm:justify-end sm:items-center hover:text-[#D4A373]"
-              onClick={() => router.push("/blog/all")}
-            >
-              View all
-            </button>
-          </div>
+      <div className="m-auto sm:flex sm:flex-col  sm:gap-5  sm:flex-wrap  ">
+        <div className=" justify-start flex sm:flex sm:flex-col sm:m-0  sm:py-5">
+          <p className="flex justify-start  text-[#1A1A1A] not-italic font-semibold   sm:flex  text-2xl sm:text-[#181A2A] sm:font-bold">
+            All blog post
+          </p>
 
-          <div className="py-8 flex gap-5 justify-center sm:flex  sm:gap-5  sm:flex-wrap">
-            {posts3.map((blog) => {
-              return (
-                <Blog
-                  aData={blog}
-                  tag={blog.tag_list[0]}
-                  // title={blog.title}
-                  // url={blog.cover_image}
-                  // date={new Date(blog.published_at).toLocaleDateString()}
-                  // name={blog.user.name}
-                  // tag={blog.tag_list[0]}
-                  // profile={blog.user.profile_image_90}
-                />
-              );
-            })}
-          </div>
+          <button
+            className="hidden sm:text-xs sm:text-[#495057] sm:font-bold	 sm:flex sm:justify-end sm:items-center hover:text-[#D4A373]"
+            onClick={() => router.push("/blog/all")}
+          >
+            View all
+          </button>
+        </div>
+
+        <div className="py-8 flex flex-wrap gap-5 justify-center sm:flex  sm:gap-5  sm:flex-wrap">
+          {posts3.map((blog) => {
+            return (
+              <Blog
+                aData={blog}
+                tag={blog.tag_list[0]}
+                // title={blog.title}
+                // url={blog.cover_image}
+                // date={new Date(blog.published_at).toLocaleDateString()}
+                // name={blog.user.name}
+                // tag={blog.tag_list[0]}
+                // profile={blog.user.profile_image_90}
+              />
+            );
+          })}
         </div>
       </div>
     </div>
