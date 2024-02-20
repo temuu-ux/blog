@@ -15,6 +15,8 @@ export default function Home(props) {
   // console.log(posts2);
   // console.log(posts3, "hi");
 
+  
+
   return (
     <div className="flex flex-col gap-[50px]   sm:flex sm:flex-col sm:m-auto sm:gap-[100px] sm:w-[1231px]">
       <div className=" hidden sm:inline-flex ">

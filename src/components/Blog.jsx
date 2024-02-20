@@ -3,7 +3,12 @@ import React from "react";
 
 export default function Blog({ aData, tag }) {
   // console.log("adata: ", aData);
-
+  const handlerSearch = (event) => {
+    const filteredArticles = aData.filter((aData) =>
+      tag.toLowerCase().includes(event.target.value.toLowerCase())
+    );
+    setFilteredArray(filteredArticles);
+  };
   return (
     <Link href={`/blog/article/${aData.id}`}>
       <div className="w-[350px] m-auto flex flex-col items-center  sm:m-auto sm:w-[392px] sm:h-[476px] border-2 rounded-xl p-4 shadow-lg hover:scale-110 ease-in-out duration-1000  hover:shadow-2xl ">
