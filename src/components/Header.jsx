@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { FiSearch } from "react-icons/fi";
+import Searchinput from "./Searchinput";
 import React from "react";
 
 import SideNavbar from "../components/SideNavbar";
@@ -39,15 +39,7 @@ export default function Header() {
             Contact
           </button>
         </Link>
-
-        <div className="flex bg-zinc-100  rounded-md items-center">
-          <input
-            placeholder="Search"
-            type="text"
-            className="bg-zinc-100 py-2 px-1 "
-          />
-          <FiSearch />
-        </div>
+        <Searchinput />
       </div>
     </div>
   );

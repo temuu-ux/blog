@@ -39,17 +39,17 @@ export default function Home(props) {
       </div>
 
       <div className="m-auto sm:flex sm:flex-col  sm:gap-5  sm:flex-wrap  ">
-        <div className=" justify-start flex sm:flex sm:flex-col sm:m-0  sm:py-5">
-          <p className="flex justify-start  text-[#1A1A1A] not-italic font-semibold   sm:flex  text-2xl sm:text-[#181A2A] sm:font-bold">
+        <div className=" justify-start flex sm:flex sm:flex-col sm:justify-between text-center  sm:py-5">
+          <p className="flex justify-start  text-[#1A1A1A] not-italic   hover:scale-y-110 ease-in-out duration-500 hover:text-[#D4A373]   font-semibold   sm:flex  text-2xl sm:text-[#181A2A] sm:font-bold">
             All blog post
           </p>
 
-          <button
-            className="hidden sm:text-xs sm:text-[#495057] sm:font-bold	 sm:flex sm:justify-end sm:items-center hover:text-[#D4A373]"
+          <p
+            className="hidden sm:text-xs sm:text-[#495057] sm:font-bold	 sm:flex sm:justify-end sm:items-center ease-in-out duration-500 hover:text-[#D4A373]"
             onClick={() => router.push("/blog/all")}
           >
             View all
-          </button>
+          </p>
         </div>
 
         <div className="py-8 flex flex-wrap gap-5 justify-center sm:flex  sm:gap-[27px]  sm:flex-wrap">
@@ -91,5 +91,3 @@ export async function getStaticProps() {
     },
   };
 }
-
-

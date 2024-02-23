@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Card({ aData }) {
   return (
     <Link href={`/blog/article/${aData.id}`}>
-      <div className=" w-[289px] h-[320px]  rounded-xl flex-col pt-8 inline-flex relative">
+      <div className=" w-[289px] h-[320px]  rounded-xl flex-col pt-8 inline-flex relative shadow-lg hover:scale-110 ease-in-out duration-1000  hover:shadow-2xl">
         <div className=" w-[289px] h-[320px]   ">
           <img
             src={aData.social_image}
