@@ -3,6 +3,11 @@ import React from "react";
 
 export default function Blog({ aData, tag }) {
   // console.log("adata: ", aData);
+  // const handlerSearch = (event) => {
+  //   const filteredArticles = aData.filter((aData) =>
+  //     tag.toLowerCase().includes(event.target.value.toLowerCase())
+  //   );
+  //   setFilteredArray(filteredArticles);
 
   return (
     <Link href={`/blog/article/${aData.id}`}>

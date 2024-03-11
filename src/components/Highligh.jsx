@@ -1,6 +1,6 @@
 export default function Highligh(props) {
   return (
-    <div className=" rounded-xl sm:flex sm:justify-center sm:items-center sm:m-auto  sm:relative sm:w-[1216px] sm:h-[600px] shadow-lg hover:scale-110 ease-in-out duration-1000  hover:shadow-2xl">
+    <div className=" rounded-xl sm:flex sm:justify-center sm:items-center sm:m-auto  sm:relative sm:w-[1216px] sm:h-[600px] shadow-lg hover:scale-105 ease-in-out duration-1000  hover:shadow-2xl">
       <div className="carousel w-full">
         <div className="carousel-item relative w-full">
           <img

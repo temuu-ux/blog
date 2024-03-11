@@ -19,7 +19,7 @@ export default function Page({ designData }) {
   return (
     <div className="flex flex-col m-auto gap-24">
       <div className="flex flex-wrap gap-5 w-[360px] m-auto sm:flex sm:m-auto  sm:w-[1216px] sm:flex-wrap">
-        <p className="  text-2xl text-[#181A2A] font-bold ">Design</p>
+        <p className="  text-2xl text-[#181A2A]  hover:scale-y-110 ease-in-out duration-500 hover:text-[#D4A373] font-bold ">Design</p>
         <AllLink />
         {articles.map((el) => {
           return <Blog aData={el} tag="design" />;

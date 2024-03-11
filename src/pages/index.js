@@ -28,7 +28,7 @@ export default function Home(props) {
         ))}
       </div>
       <div className=" m-auto sm:m-0">
-        <p className="text-[#1A1A1A] not-italic font-semibold flex text-center justify-start m-auto sm:flex  text-2xl sm:text-[#181A2A] sm:font-bold">
+        <p className="text-[#1A1A1A] cursor-pointer hover:scale-y-110 ease-in-out duration-500 hover:text-[#D4A373] not-italic  font-semibold flex text-center justify-start m-auto sm:flex  text-2xl sm:text-[#181A2A] sm:font-bold">
           Trending
         </p>
         <div className="flex justify-around items-center flex-col sm:flex sm:flex-row  sm:justify-between sm:w-[100%]">
@@ -40,12 +40,12 @@ export default function Home(props) {
 
       <div className="m-auto sm:flex sm:flex-col  sm:gap-5  sm:flex-wrap  ">
         <div className=" justify-start flex sm:flex sm:flex-col sm:justify-between text-center  sm:py-5">
-          <p className="flex justify-start  text-[#1A1A1A] not-italic   hover:scale-y-110 ease-in-out duration-500 hover:text-[#D4A373]   font-semibold   sm:flex  text-2xl sm:text-[#181A2A] sm:font-bold">
+          <p className="flex justify-start cursor-pointer text-[#1A1A1A] not-italic   hover:scale-y-110 ease-in-out duration-500 hover:text-[#D4A373]   font-semibold   sm:flex  text-2xl sm:text-[#181A2A] sm:font-bold">
             All blog post
           </p>
 
           <p
-            className="hidden sm:text-xs sm:text-[#495057] sm:font-bold	 sm:flex sm:justify-end sm:items-center ease-in-out duration-500 hover:text-[#D4A373]"
+            className="hidden cursor-pointer sm:text-xs sm:text-[#495057] sm:font-bold	 sm:flex sm:justify-end sm:items-center ease-in-out duration-500 hover:text-[#D4A373]"
             onClick={() => router.push("/blog/all")}
           >
             View all

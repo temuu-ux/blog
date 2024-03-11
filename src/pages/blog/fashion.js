@@ -21,7 +21,7 @@ export default function Page({ fashionData }) {
   return (
     <div className="flex flex-col m-auto gap-24">
       <div className="flex flex-wrap w-[360px] gap-5 m-auto sm:flex sm:m-auto sm:gap-5 sm:w-[1216px] sm:flex-wrap">
-        <p className="text-2xl text-[#181A2A] font-bold">Fashion</p>
+        <p className="text-2xl text-[#181A2A]  hover:scale-y-110 ease-in-out duration-500 hover:text-[#D4A373] font-bold">Fashion</p>
         <AllLink />
         {articles.map((e) => {
           return <Blog aData={e} tag="fashion" />;

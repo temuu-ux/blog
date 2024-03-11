@@ -18,7 +18,9 @@ export default function Page({ allData }) {
   return (
     <div className="m-auto flex flex-col gap-24 ">
       <div className=" flex flex-wrap w-[360px] m-auto gap-5 sm:w-[1231px]  sm:flex-wrap">
-        <p className="text-2xl text-[#181A2A] font-bold">All post</p>
+        <p className="text-2xl cursor-pointer text-[#181A2A]  hover:scale-y-110 ease-in-out duration-500 hover:text-[#D4A373] font-bold">
+          All post
+        </p>
         <AllLink />
         {tag.map((e) => {
           return <Blog aData={e} />;
